@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* font-family: "Nunito", sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d0d;
+  padding: 10px 70px;
+  height: 10vh;
+}
+header .logo img {
+  height: 70px;
+  object-fit: cover;
+}
+
+header .menu {
+  display: flex;
+}
+
+header .menu a,
+header .menu p {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+header .menu p {
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.menu-list {
+  height: 100vh;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d0d0d;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  padding: 10px;
+  z-index: 5;
+  transition: 0.5s all;
+}
+.menu-list .left {
+  color: white;
+  font-size: 24px;
+  padding: 10px 0 25px;
+}
+
+.menu-list .item-menu {
+  text-decoration: none;
+  font-size: 21px;
+  margin: 5px 0;
+  color: white;
+}
+
+.menu-visible {
+  right: 0;
+}
+
+.hamburger {
+  background-color: transparent;
+
+  height: 60px;
+  width: 60px;
+  padding: 20px 20px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s
+    cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 4;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.hamburger.is-active {
+  background-color: none;
+}
+._layer {
+  background: white;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 28px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+.hamburger:hover .-top {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.hamburger:hover .-bottom {
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.hamburger.is-active .-top {
+  -webkit-transform: translateY(200%) rotate(45deg) !important;
+  -ms-transform: translateY(200%) rotate(45deg) !important;
+  transform: translateY(200%) rotate(45deg) !important;
+}
+.hamburger.is-active .-mid {
+  opacity: 0;
+}
+.hamburger.is-active .-bottom {
+  -webkit-transform: translateY(-200%) rotate(135deg) !important;
+  -ms-transform: translateY(-200%) rotate(135deg) !important;
+  transform: translateY(-200%) rotate(135deg) !important;
+}
+
+.inicio {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+}
+.inicio .fondo,
+.inicio .sombra {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+}
+.inicio .sombra {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.inicio .presentacion {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.inicio .presentacion h1 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.inicio .presentacion h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  padding: 20px 0 10px;
+}
+
+.inicio .presentacion p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 20px 0;
+  line-height: 28px;
+}
+
+.inicio .presentacion button {
+  align-self: flex-start;
+  padding: 10px 18px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.5s all;
+}
+
+.inicio .presentacion button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 40px 0;
+  min-height: 100vh;
+}
+.servicios h2 {
+  font-weight: 300;
+  font-size: 45px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.servicios .nuestros-servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.servicios .nuestros-servicios .servicio {
+  padding: 10px 20px;
+  margin: 0 10px;
+  width: 40%;
+}
+.servicios .nuestros-servicios .servicio img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.servicios .nuestros-servicios .servicio h4 {
+  font-weight: 300;
+  font-size: 26px;
+  margin: 10px auto;
+  color: #c8c1c1;
+}
+
+.servicios .nuestros-servicios .servicio p {
+  color: #c8c1c1;
+  font-size: 18px;
+}
+
+.flota {
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 0;
+  min-height: 100vh;
+}
+
+.flota h2 {
+  color: white;
+  font-weight: 300;
+  font-size: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.flota .nuestra-flota {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 45px 0;
+  margin: 20px auto;
+}
+
+.flota .nuestra-flota .item-flota {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 60px;
+  width: 300px;
+}
+
+.flota .nuestra-flota .item-flota img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.flota .nuestra-flota .item-flota h4,
+.flota .nuestra-flota .item-flota p {
+  font-weight: 300;
+  color: #c8c1c1;
+}
+
+.flota .nuestra-flota .item-flota h4 {
+  font-size: 24px;
+  padding: 25px 0 10px;
+}
+
+.flota .nuestra-flota .item-flota p {
+  font-size: 17px;
+}
+
+.contacto {
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #c8c1c1;
+}
+
+.contacto > img {
+  height: 100vh;
+  width: 40%;
+}
+
+.contacto .container-contacto {
+  padding: 0 60px;
+}
+
+.contacto .container-contacto h2 {
+  color: #c8c1c1;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.contacto .container-contacto .contactos {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+@media (max-width: 1370px) {
+  header {
+    height: 90px;
+  }
+  .inicio .presentacion {
+    width: 80%;
+  }
+  .servicios .nuestros-servicios .servicio {
+    width: 45%;
+    padding: 10px 25px;
+  }
+
+  .flota h2 {
+    margin-bottom: 0px;
+  }
+  .flota .nuestra-flota .item-flota {
+    margin: 0 30px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .servicios h2 {
+    font-size: 32px;
+    padding: 0 15px;
+  }
+  .flota .nuestra-flota {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .flota .nuestra-flota .item-flota {
+    margin: 25px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 30px;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+  }
+  header .menu {
+    display: none;
+  }
+
+  .servicios .nuestros-servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicios .nuestros-servicios .servicio {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .flota h2 {
+    font-size: 35px;
+  }
+  .flota .nuestra-flota .item-flota {
+    margin: 25px auto;
+  }
+  .flota .nuestra-flota .item-flota:last-child {
+    margin: 25px 30px;
+  }
+}
+
+@media (max-width: 630px) {
+  .flota h2 {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+  .flota .nuestra-flota .item-flota:last-child {
+    margin: 25px auto;
+  }
+}
+@media (max-width: 515px) {
+  .servicios h2 {
+    font-size: 27px;
+  }
+
+  .servicios .nuestros-servicios .servicio {
+    width: 95%;
+  }
+}
