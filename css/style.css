@@ -22,6 +22,8 @@ header {
 header .logo img {
   height: 55px;
   object-fit: cover;
+  position: relative;
+  top: 3px;
 }
 
 header .menu {
@@ -186,10 +188,11 @@ header .menu p {
   line-height: 28px;
 }
 
-.inicio .presentacion button {
+.inicio .presentacion .btn-cotizacion {
   align-self: flex-start;
   padding: 10px 18px;
   font-size: 16px;
+  text-decoration: none;
   background-color: white;
   color: black;
   border: none;
@@ -399,12 +402,14 @@ header .menu p {
   flex-direction: row;
   align-items: center;
   color: #c8c1c1;
+  padding: 50px 15px;
 }
 
 .contacto > img {
   height: 100vh;
   width: 40%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .contacto .container-contacto {
