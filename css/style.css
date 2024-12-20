@@ -16,11 +16,11 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #050505;
-  padding: 10px 70px;
+  padding: 0px 70px;
   height: 10vh;
 }
 header .logo img {
-  height: 55px;
+  height: 90px;
   object-fit: cover;
   position: relative;
   top: 3px;
