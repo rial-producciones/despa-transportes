@@ -20,7 +20,7 @@ header {
   height: 10vh;
 }
 header .logo img {
-  height: 80px;
+  height: 70px;
   object-fit: cover;
   position: relative;
   top: 3px;
